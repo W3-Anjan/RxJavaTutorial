@@ -1,4 +1,4 @@
-## RxJava 2.x
+# RxJava 2.x
 
 ### What is RxJava?
  > RxJava is an art and endless possibilities await those who can master it.
@@ -33,6 +33,11 @@
  ![image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/images/animation_1.gif)
  
  
+ ## IMPORTANT
+ Observable and Flowable can emit **multiple** items
+ 
+ Single, Maybe and Completable are **one or no emission** of items.
+ 
  ### Flowable Backpressure Strategy
  -  Buffer
  -  Drop
@@ -46,4 +51,11 @@
  - scan
  - reduce
  - collect
+ 
+ ### Other components are as follows:
+ 
+ - **Subscription** - work is going on or completed or is used to cancel.
+ - **Operators** - Modify Data
+ - **Schedulers** - Where the work should be done, which thread like main thread, etc.
+ - **Subscriber/Disposable** - where the response will be sent after work has been completed.
  
