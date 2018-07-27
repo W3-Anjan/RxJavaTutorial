@@ -1,6 +1,6 @@
-##RxJava 2.x
+## RxJava 2.x
 
-###What is RxJava?
+### What is RxJava?
  > RxJava is an art and endless possibilities await those who can master it.
  
  **RxJava** is a Java VM implementation of Reactive Extensions.
