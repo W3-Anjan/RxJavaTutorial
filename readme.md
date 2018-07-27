@@ -14,7 +14,7 @@
  **Event-Based:** The program executes the code based on the event generated.
  
  
- ###Flowable and Observable
+ ### Flowable and Observable
  
  RxJava provides more types of event publishers:
  
