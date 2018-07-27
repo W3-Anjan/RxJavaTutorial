@@ -29,4 +29,5 @@
  - **Completable** a specialized emitter that just signals if it completed successfully or with an error.
  
  I found this [link](https://tomstechnicalblog.blogspot.com/2015_10_01_archive.html) very worthy to understand Observable and its Subscriber's builtin methods.
- [image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/images/animation_1.gif)
+ 
+ ![image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/images/animation_1.gif)
