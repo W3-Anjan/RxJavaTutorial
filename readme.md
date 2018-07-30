@@ -59,3 +59,9 @@
  - **Schedulers** - Where the work should be done, which thread like main thread, etc.
  - **Subscriber/Disposable** - where the response will be sent after work has been completed.
  
+ ##Understanding RxJava Subject
+ 
+ ###What is Subject?
+  > A Subject is a sort of bridge or proxy that is available in some implementations of ReactiveX that acts both as an observer and as an Observable. Because it is an observer, it can subscribe to one or more Observables, and because it is an Observable, it can pass through the items it observes by re-emitting them, and it can also emit new items.
+  
+  detailed explanation[here](https://mindorks.com/course/learn-rxjava/chapter/id/4/page/id/15)
