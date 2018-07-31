@@ -66,9 +66,11 @@
   
   detailed explanation [here](https://mindorks.com/course/learn-rxjava/chapter/id/4/page/id/15)
   
- ### RxJava2 with MVP structure
+ ## RxJava2 with MVP structure
  
   This is the  diagram of how we can use Rxjava on MVP structure.
+  > please ui and data package 
+  
   ![image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/RxApi.PNG) 
   
   >This explanation is taken from google's Rx example with MVP [link](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)
