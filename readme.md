@@ -69,7 +69,7 @@
  ## RxJava2 with MVP structure
  
   This is the  diagram of how we can use Rxjava on MVP structure.
-  > please ui and data package 
+  > please see ui and data package 
   
   ![image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/RxApi.PNG) 
   
