@@ -1,4 +1,4 @@
-# RxJava 2.x
+# RxJava 2.x with Room and Retrofit 2.x with MVP pattern
 
 ### What is RxJava?
  > RxJava is an art and endless possibilities await those who can master it.
@@ -74,3 +74,11 @@
   ![image](https://github.com/anjandebnath/RxJavaTutorial/blob/master/RxApi.PNG) 
   
   >This explanation is taken from google's Rx example with MVP [link](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)
+  
+  
+  
+  # RxJava2 with Retrofit2
+  
+  The following [link](http://www.zoftino.com/retrofit-rxjava-android-example) contains a details explanation of why Rxjava is best solution for REST Api related task.
+  
+  
