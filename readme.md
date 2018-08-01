@@ -75,10 +75,21 @@
   
   >This explanation is taken from google's Rx example with MVP [link](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)
   
+  # RxJava2 with Room
   
+  The following [link](http://www.zoftino.com/android-persistency-room-rxjava) contains a details explanation of how Rxjava can be used on Room persistence library 
+    
+    to get the demo code go to manifest file and run 
+    AddTaskActivity.java
+                
+    
+    
   
   # RxJava2 with Retrofit2
   
   The following [link](http://www.zoftino.com/retrofit-rxjava-android-example) contains a details explanation of why Rxjava is best solution for REST Api related task.
+  
+      to get the demo code go to manifest file and run 
+      GetRemoteCouponActivity.java
   
   
