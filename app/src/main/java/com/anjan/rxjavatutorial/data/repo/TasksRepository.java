@@ -3,12 +3,14 @@ package com.anjan.rxjavatutorial.data.repo;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.anjan.rxjavatutorial.data.model.StoreCoupons;
 import com.anjan.rxjavatutorial.data.model.TaskEntity;
 
 import java.util.List;
 
 import io.reactivex.Flowable;
 import io.reactivex.Maybe;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 
 /**
@@ -20,10 +22,13 @@ public class TasksRepository implements TasksDataSource{
     private static TasksRepository INSTANCE = null;
 
     private final TasksDataSource mTasksLocalDataSource;
+    private final TasksDataSource mTasksRemoteDataSource;
+
 
     // Prevent direct instantiation.
     private TasksRepository(Context context) {
         mTasksLocalDataSource = new TasksLocalDataSource(context);
+        mTasksRemoteDataSource = new TaskRemoteDataSource(context);
     }
 
     /**
@@ -60,5 +65,15 @@ public class TasksRepository implements TasksDataSource{
     @Override
     public Single<Long> saveTask(@NonNull TaskEntity task) {
         return mTasksLocalDataSource.saveTask(task);
+    }
+
+    @Override
+    public Observable<StoreCoupons> getCoupons(String status) {
+        return mTasksRemoteDataSource.getCoupons(status);
+    }
+
+    @Override
+    public Observable<StoreCoupons> getStoreInfo() {
+        return null;
     }
 }

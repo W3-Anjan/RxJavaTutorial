@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.anjan.rxjavatutorial.data.localstorage.AppDatabase;
+import com.anjan.rxjavatutorial.data.model.StoreCoupons;
 import com.anjan.rxjavatutorial.data.model.TaskEntity;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.concurrent.Executors;
 
 import io.reactivex.Flowable;
 import io.reactivex.Maybe;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 
 import static com.anjan.rxjavatutorial.data.localstorage.AppDatabase.DATABASE_NAME;
@@ -26,14 +28,11 @@ public class TasksLocalDataSource implements TasksDataSource {
 
     private AppDatabase taskDb;
 
-    private Executor executor;
-
     TasksLocalDataSource(Context context){
         taskDb = Room.databaseBuilder(context,
                 AppDatabase.class, DATABASE_NAME)
                 .build();
 
-        executor = Executors.newFixedThreadPool(2);
     }
 
     @Override
@@ -63,5 +62,15 @@ public class TasksLocalDataSource implements TasksDataSource {
                 return taskDb.taskDao().insertTask(task);
             }
         });
+    }
+
+    @Override
+    public Observable<StoreCoupons> getCoupons(String status) {
+        return null;
+    }
+
+    @Override
+    public Observable<StoreCoupons> getStoreInfo() {
+        return null;
     }
 }

@@ -33,9 +33,7 @@ public class AddTaskPresenter extends BasePresenter<AddTaskView> {
         mCompositeDisposable = new CompositeDisposable();
     }
 
-    public void subscribe(){
 
-    }
 
     public void unSubscribe(){
         mCompositeDisposable.clear();

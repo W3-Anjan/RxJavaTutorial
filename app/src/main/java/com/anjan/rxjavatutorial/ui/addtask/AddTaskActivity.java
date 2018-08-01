@@ -46,4 +46,11 @@ public class AddTaskActivity extends BaseActivity<AddTaskView, AddTaskPresenter>
         return new AddTaskPresenter(AddTaskActivity.this);
     }
 
+    @Override
+    protected void onDestroy() {
+        //dispose subscriptions
+        presenter.unSubscribe();
+        super.onDestroy();
+    }
+
 }
