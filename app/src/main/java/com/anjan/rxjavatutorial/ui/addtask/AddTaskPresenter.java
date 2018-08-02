@@ -34,6 +34,9 @@ public class AddTaskPresenter extends BasePresenter<AddTaskView> {
     }
 
 
+    public void subscribe(){
+
+    }
 
     public void unSubscribe(){
         mCompositeDisposable.clear();
@@ -51,24 +54,18 @@ public class AddTaskPresenter extends BasePresenter<AddTaskView> {
             .subscribeOn(Schedulers.io())
             // Be notified on the main thread
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(new SingleObserver<Long>() {
-                @Override
-                public void onSubscribe(Disposable d) {
+            .subscribe(this::getInsertId, this::errorCode);
+    }
 
-                }
+    public void getInsertId(Long integer){
+        Log.d("AddTask", "id::"+integer);
+        if(getMvpView()!= null){
+            getMvpView().backToPrevious();
+        }
+    }
 
-                @Override
-                public void onSuccess(Long integer) {
-                    Log.d("AddTask", "id::"+integer);
-                }
-
-                @Override
-                public void onError(Throwable e) {
-
-                }
-            });
-
-
+    public void errorCode(Throwable e){
+        Log.d("AddTask", "e"+ e.toString());
     }
 
 

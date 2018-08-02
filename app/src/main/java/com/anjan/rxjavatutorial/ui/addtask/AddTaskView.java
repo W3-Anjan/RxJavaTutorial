@@ -8,4 +8,5 @@ import com.anjan.rxjavatutorial.ui.base.MvpView;
  */
 public interface AddTaskView extends MvpView {
 
+    void backToPrevious();
 }

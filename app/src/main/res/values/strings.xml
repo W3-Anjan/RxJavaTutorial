@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RxTutorial</string>
+    <string name="app_name">Rx</string>
     <string name="title_activity_add_task">AddTaskActivity</string>
     <string name="add_task">New TO-DO</string>
     <string name="edit_task">Edit TO-DO</string>
@@ -40,4 +40,5 @@
     <string name="no_tasks_completed">You have no completed TO-DOs!</string>
     <string name="no_tasks_add">Add a TO-DO item +</string>
     <string name="refresh">Refresh</string>
+    <string name="title_activity_tasks">TasksActivity</string>
 </resources>

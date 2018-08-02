@@ -49,7 +49,7 @@ public class TasksRepository implements TasksDataSource{
 
     @Override
     public Flowable<List<TaskEntity>> getTaskList() {
-        return null;
+        return mTasksLocalDataSource.getTaskList();
     }
 
     @Override

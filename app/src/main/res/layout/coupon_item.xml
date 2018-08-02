@@ -48,7 +48,6 @@ android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/expiry"
-                android:text="expiry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/zoftinoText"
@@ -59,7 +58,6 @@ android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/coupon_code"
-                android:text="cupon code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/zoftinoText"

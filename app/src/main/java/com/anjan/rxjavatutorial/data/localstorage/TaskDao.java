@@ -22,13 +22,13 @@ import io.reactivex.Single;
 public interface TaskDao {
 
     @Query("SELECT * FROM TaskEntity")
-    Flowable<List<TaskEntity>> getCoupons();
+    Flowable<List<TaskEntity>> getTaskList();
 
     @Query("SELECT * FROM TaskEntity WHERE taskId = :storeIn ")
-    Maybe<TaskEntity> getCouponByStore(String storeIn);
+    Maybe<TaskEntity> getTaskByStore(String storeIn);
 
     @Query("SELECT * FROM TaskEntity LIMIT 1")
-    Single<TaskEntity> getOneCoupon();
+    Single<TaskEntity> getSingleTask();
 
 
     @Insert (onConflict = OnConflictStrategy.REPLACE)

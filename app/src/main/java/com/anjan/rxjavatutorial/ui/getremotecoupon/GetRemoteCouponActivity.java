@@ -50,19 +50,9 @@ public class GetRemoteCouponActivity extends BaseActivity<GetRemoteCouponView, G
         RecyclerView.LayoutManager couponLayoutManager = new LinearLayoutManager(this);
         couponRecyclerView.setLayoutManager(couponLayoutManager);
 
-        buttonShowCoupon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.getCouponData();
-            }
-        });
+        buttonShowCoupon.setOnClickListener(v -> presenter.getCouponData());
 
-        buttonTopScore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.getStoreCouponData();
-            }
-        });
+        buttonTopScore.setOnClickListener(v -> presenter.getStoreCouponData());
 
 
     }

@@ -1,5 +1,6 @@
 package com.anjan.rxjavatutorial.ui.addtask;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,6 +17,8 @@ import butterknife.ButterKnife;
 
 public class AddTaskActivity extends BaseActivity<AddTaskView, AddTaskPresenter> implements AddTaskView{
 
+    public static final int REQUEST_ADD_TASK = 1;
+
     @BindView(R.id.add_task_title)
     EditText addTask;
 
@@ -29,16 +32,11 @@ public class AddTaskActivity extends BaseActivity<AddTaskView, AddTaskPresenter>
 
         ButterKnife.bind(this);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenter.saveTask(addTask.getEditableText().toString(), addDetail.getEditableText().toString());
-            }
-        });
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(view -> presenter.saveTask(addTask.getEditableText().toString(), addDetail.getEditableText().toString()));
     }
 
     @Override
@@ -53,4 +51,9 @@ public class AddTaskActivity extends BaseActivity<AddTaskView, AddTaskPresenter>
         super.onDestroy();
     }
 
+    @Override
+    public void backToPrevious() {
+        setResult(Activity.RESULT_OK);
+        finish();
+    }
 }

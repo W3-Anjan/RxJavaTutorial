@@ -37,7 +37,7 @@ public class TasksLocalDataSource implements TasksDataSource {
 
     @Override
     public Flowable<List<TaskEntity>> getTaskList() {
-        return null;
+        return taskDb.taskDao().getTaskList();
     }
 
     @Override
