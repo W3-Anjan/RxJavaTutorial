@@ -53,6 +53,16 @@ public class TasksRepository implements TasksDataSource{
     }
 
     @Override
+    public Single<Long> saveTask(@NonNull TaskEntity task) {
+        return mTasksLocalDataSource.saveTask(task);
+    }
+
+    @Override
+    public Observable<StoreCoupons> getCoupons(String status) {
+        return mTasksRemoteDataSource.getCoupons(status);
+    }
+
+    @Override
     public Maybe<TaskEntity> getTaskById(String taskId) {
         return null;
     }
@@ -62,15 +72,7 @@ public class TasksRepository implements TasksDataSource{
         return null;
     }
 
-    @Override
-    public Single<Long> saveTask(@NonNull TaskEntity task) {
-        return mTasksLocalDataSource.saveTask(task);
-    }
 
-    @Override
-    public Observable<StoreCoupons> getCoupons(String status) {
-        return mTasksRemoteDataSource.getCoupons(status);
-    }
 
     @Override
     public Observable<StoreCoupons> getStoreInfo() {
