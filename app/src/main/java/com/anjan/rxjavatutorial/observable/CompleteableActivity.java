@@ -28,6 +28,7 @@ public class CompleteableActivity extends AppCompatActivity {
 
     Button btnClick;
     TextView textDisplay;
+    int testVariable;
 
     //region Create CompletableObservable
     Completable completable = Completable.timer(1000, TimeUnit.MILLISECONDS);
