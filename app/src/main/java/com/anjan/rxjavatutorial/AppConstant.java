@@ -12,5 +12,6 @@ public class AppConstant {
 
     public static final String LINE_SEPARATOR = "\n";
     public static final String DEMO_STRING = "demo-";
+    public static final String WHITE_DEMO_STRING = "demo-";
 
 }
