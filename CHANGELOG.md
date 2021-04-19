@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.1.1...v1.2.0) (2021-04-19)
+
+
+### Features
+
+* **constant:** major changes in the versioning ([dc5502f](https://github.com/W3-Anjan/RxJavaTutorial/commit/dc5502ff9dd66b20c8003e0bffb61f77d7d0d7a1))
+
 ### [1.1.1](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.1.0...v1.1.1) (2021-04-19)
 
 ## [1.1.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.0.1...v1.1.0) (2021-04-19)
