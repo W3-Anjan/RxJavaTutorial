@@ -1,0 +1,347 @@
+@startuml
+
+title __RXJAVATUTORIAL.APP's Class Diagram__\n
+
+  namespace com.anjan.rxjavatutorial {
+    class com.anjan.rxjavatutorial.AppConstant {
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    class com.anjan.rxjavatutorial.BuildConfig {
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    class com.anjan.rxjavatutorial.MyApplication {
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.localstorage {
+      abstract class com.anjan.rxjavatutorial.data.localstorage.AppDatabase {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.localstorage {
+      class com.anjan.rxjavatutorial.data.localstorage.AppDatabase_Impl {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.localstorage {
+      interface com.anjan.rxjavatutorial.data.localstorage.TaskDao {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.localstorage {
+      class com.anjan.rxjavatutorial.data.localstorage.TaskDao_Impl {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.model {
+      class com.anjan.rxjavatutorial.data.model.Coupon {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.model {
+      class com.anjan.rxjavatutorial.data.model.StoreCoupons {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.model {
+      class com.anjan.rxjavatutorial.data.model.TaskEntity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.remoteservice {
+      interface com.anjan.rxjavatutorial.data.remoteservice.CouponApi {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.remoteservice {
+      abstract class com.anjan.rxjavatutorial.data.remoteservice.StoreService {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      interface com.anjan.rxjavatutorial.data.repo.LocalDataSource {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      interface com.anjan.rxjavatutorial.data.repo.RemoteDataSource {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      class com.anjan.rxjavatutorial.data.repo.TaskRemoteDataSource {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      class com.anjan.rxjavatutorial.data.repo.TaskRemoteDataSource_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      class com.anjan.rxjavatutorial.data.repo.TasksLocalDataSource {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      class com.anjan.rxjavatutorial.data.repo.TasksLocalDataSource_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace data.repo {
+      class com.anjan.rxjavatutorial.data.repo.TasksRepository {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace di {
+      interface com.anjan.rxjavatutorial.di.AppComponent {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace di {
+      class com.anjan.rxjavatutorial.di.DaggerAppComponent {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace observable {
+      class com.anjan.rxjavatutorial.observable.CompleteableActivity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace observable {
+      class com.anjan.rxjavatutorial.observable.FlowableActivity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.addtask {
+      class com.anjan.rxjavatutorial.ui.addtask.AddTaskActivity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.addtask {
+      class com.anjan.rxjavatutorial.ui.addtask.AddTaskActivity_MembersInjector {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.addtask {
+      class com.anjan.rxjavatutorial.ui.addtask.AddTaskViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.addtask {
+      class com.anjan.rxjavatutorial.ui.addtask.AddTaskViewModel_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.getremotecoupon {
+      class com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponActivity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.getremotecoupon {
+      class com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponActivity_MembersInjector {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.getremotecoupon {
+      class com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.getremotecoupon {
+      class com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponViewModel_Factory {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.getremotecoupon {
+      class com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponsAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.EmptyRecyclerView {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.TasksActivity {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.TasksActivity_MembersInjector {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.TasksAdapter {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.TasksViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.anjan.rxjavatutorial {
+    namespace ui.tasks {
+      class com.anjan.rxjavatutorial.ui.tasks.TasksViewModel_Factory {
+      }
+    }
+  }
+  
+
+  com.anjan.rxjavatutorial.MyApplication -up-|> android.app.Application
+  com.anjan.rxjavatutorial.MyApplication o-- com.anjan.rxjavatutorial.di.AppComponent : appComponent
+  com.anjan.rxjavatutorial.data.localstorage.AppDatabase -up-|> android.arch.persistence.room.RoomDatabase
+  com.anjan.rxjavatutorial.data.localstorage.AppDatabase_Impl -up-|> com.anjan.rxjavatutorial.data.localstorage.AppDatabase
+  com.anjan.rxjavatutorial.data.localstorage.AppDatabase_Impl o-- com.anjan.rxjavatutorial.data.localstorage.TaskDao : _taskDao
+  com.anjan.rxjavatutorial.data.localstorage.TaskDao_Impl .up.|> com.anjan.rxjavatutorial.data.localstorage.TaskDao
+  com.anjan.rxjavatutorial.data.repo.TaskRemoteDataSource .up.|> com.anjan.rxjavatutorial.data.repo.RemoteDataSource
+  com.anjan.rxjavatutorial.data.repo.TaskRemoteDataSource_Factory .up.|> dagger.internal.Factory
+  com.anjan.rxjavatutorial.data.repo.TasksLocalDataSource .up.|> com.anjan.rxjavatutorial.data.repo.LocalDataSource
+  com.anjan.rxjavatutorial.data.repo.TasksLocalDataSource o-- com.anjan.rxjavatutorial.data.localstorage.AppDatabase : taskDb
+  com.anjan.rxjavatutorial.data.repo.TasksLocalDataSource_Factory .up.|> dagger.internal.Factory
+  com.anjan.rxjavatutorial.data.repo.TasksRepository o-- com.anjan.rxjavatutorial.data.repo.LocalDataSource : mTasksLocalDataSource
+  com.anjan.rxjavatutorial.data.repo.TasksRepository o-- com.anjan.rxjavatutorial.data.repo.RemoteDataSource : mTasksRemoteDataSource
+  com.anjan.rxjavatutorial.di.DaggerAppComponent .up.|> com.anjan.rxjavatutorial.di.AppComponent
+  com.anjan.rxjavatutorial.observable.CompleteableActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.anjan.rxjavatutorial.observable.FlowableActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.anjan.rxjavatutorial.ui.addtask.AddTaskActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.anjan.rxjavatutorial.ui.addtask.AddTaskActivity o-- com.anjan.rxjavatutorial.ui.addtask.AddTaskViewModel : addTaskViewModel
+  com.anjan.rxjavatutorial.ui.addtask.AddTaskActivity_MembersInjector .up.|> dagger.MembersInjector
+  com.anjan.rxjavatutorial.ui.addtask.AddTaskViewModel o-- com.anjan.rxjavatutorial.data.repo.TasksRepository : mTasksRepository
+  com.anjan.rxjavatutorial.ui.addtask.AddTaskViewModel_Factory .up.|> dagger.internal.Factory
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponActivity o-- com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponViewModel : getRemoteCouponViewModel
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponActivity_MembersInjector .up.|> dagger.MembersInjector
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponViewModel o-- com.anjan.rxjavatutorial.data.repo.TasksRepository : mTasksRepository
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponViewModel_Factory .up.|> dagger.internal.Factory
+  com.anjan.rxjavatutorial.ui.getremotecoupon.GetRemoteCouponsAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.anjan.rxjavatutorial.ui.tasks.EmptyRecyclerView -up-|> androidx.recyclerview.widget.RecyclerView
+  com.anjan.rxjavatutorial.ui.tasks.TasksActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.anjan.rxjavatutorial.ui.tasks.TasksActivity o-- com.anjan.rxjavatutorial.ui.tasks.TasksAdapter : tasksAdapter
+  com.anjan.rxjavatutorial.ui.tasks.TasksActivity o-- com.anjan.rxjavatutorial.ui.tasks.TasksViewModel : tasksViewModel
+  com.anjan.rxjavatutorial.ui.tasks.TasksActivity_MembersInjector .up.|> dagger.MembersInjector
+  com.anjan.rxjavatutorial.ui.tasks.TasksAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.anjan.rxjavatutorial.ui.tasks.TasksViewModel o-- com.anjan.rxjavatutorial.data.repo.TasksRepository : mTasksRepository
+  com.anjan.rxjavatutorial.ui.tasks.TasksViewModel_Factory .up.|> dagger.internal.Factory
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

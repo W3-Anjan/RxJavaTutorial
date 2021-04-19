@@ -1,0 +1,68 @@
+Index: app/src/main/java/com/anjan/rxjavatutorial/data/repo/TaskRemoteDataSource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.anjan.rxjavatutorial.data.repo;\r\n\r\nimport android.content.Context;\r\nimport android.support.annotation.NonNull;\r\n\r\nimport com.anjan.rxjavatutorial.data.model.StoreCoupons;\r\nimport com.anjan.rxjavatutorial.data.model.TaskEntity;\r\nimport com.anjan.rxjavatutorial.data.remoteservice.CouponApi;\r\nimport com.anjan.rxjavatutorial.data.remoteservice.StoreService;\r\n\r\nimport java.util.List;\r\n\r\nimport io.reactivex.Flowable;\r\nimport io.reactivex.Maybe;\r\nimport io.reactivex.Observable;\r\nimport io.reactivex.Single;\r\nimport retrofit2.Retrofit;\r\n\r\n/**\r\n * Created by Anjan Debnath on 8/1/2018.\r\n * Copyright (c) 2018, W3 Engineers Ltd. All rights reserved.\r\n */\r\npublic class TaskRemoteDataSource implements TasksDataSource {\r\n\r\n\r\n    Retrofit retrofit;\r\n\r\n    TaskRemoteDataSource(Context context){\r\n        retrofit = StoreService.getCouponClient();\r\n    }\r\n\r\n    @Override\r\n    public Flowable<List<TaskEntity>> getTaskList() {\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public Maybe<TaskEntity> getTaskById(String taskId) {\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public Single<TaskEntity> getSingleTask() {\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public Single<Long> saveTask(@NonNull TaskEntity task) {\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public Observable<StoreCoupons> getCoupons(String status) {\r\n        return retrofit.create(CouponApi.class).getCoupons(status);\r\n    }\r\n\r\n    @Override\r\n    public Observable<StoreCoupons> getStoreInfo() {\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/anjan/rxjavatutorial/data/repo/TaskRemoteDataSource.java	(revision 0a370eabecdd3db630d3deb6f5d1a8d3985d6d73)
++++ app/src/main/java/com/anjan/rxjavatutorial/data/repo/TaskRemoteDataSource.java	(date 1612853774409)
+@@ -25,7 +25,7 @@
+ 
+     Retrofit retrofit;
+ 
+-    TaskRemoteDataSource(Context context){
++    TaskRemoteDataSource(){
+         retrofit = StoreService.getCouponClient();
+     }
+ 
+Index: app/src/main/java/com/anjan/rxjavatutorial/data/repo/TasksRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.anjan.rxjavatutorial.data.repo;\r\n\r\nimport android.content.Context;\r\nimport android.support.annotation.NonNull;\r\n\r\nimport com.anjan.rxjavatutorial.data.model.StoreCoupons;\r\nimport com.anjan.rxjavatutorial.data.model.TaskEntity;\r\n\r\nimport java.util.List;\r\n\r\nimport io.reactivex.Flowable;\r\nimport io.reactivex.Maybe;\r\nimport io.reactivex.Observable;\r\nimport io.reactivex.Single;\r\n\r\n/**\r\n * Created by Anjan Debnath on 7/31/2018.\r\n * Copyright (c) 2018, W3 Engineers Ltd. All rights reserved.\r\n */\r\npublic class TasksRepository implements TasksDataSource{\r\n\r\n    private static TasksRepository INSTANCE = null;\r\n\r\n    private final TasksDataSource mTasksLocalDataSource;\r\n    private final TasksDataSource mTasksRemoteDataSource;\r\n\r\n\r\n    // Prevent direct instantiation.\r\n    private TasksRepository(Context context) {\r\n        mTasksLocalDataSource = new TasksLocalDataSource(context);\r\n        mTasksRemoteDataSource = new TaskRemoteDataSource(context);\r\n    }\r\n\r\n    /**\r\n     * Returns the single instance of this class, creating it if necessary.\r\n     * @return the {@link TasksRepository} instance\r\n     */\r\n    public static TasksRepository getInstance(Context context) {\r\n        if (INSTANCE == null) {\r\n            INSTANCE = new TasksRepository(context);\r\n        }\r\n        return INSTANCE;\r\n    }\r\n\r\n\r\n    public static void destroyInstance() {\r\n        INSTANCE = null;\r\n    }\r\n\r\n    @Override\r\n    public Flowable<List<TaskEntity>> getTaskList() {\r\n        return mTasksLocalDataSource.getTaskList();\r\n    }\r\n\r\n    @Override\r\n    public Single<Long> saveTask(@NonNull TaskEntity task) {\r\n        return mTasksLocalDataSource.saveTask(task);\r\n    }\r\n\r\n    @Override\r\n    public Observable<StoreCoupons> getCoupons(String status) {\r\n        return mTasksRemoteDataSource.getCoupons(status);\r\n    }\r\n\r\n    @Override\r\n    public Maybe<TaskEntity> getTaskById(String taskId) {\r\n        return null;\r\n    }\r\n\r\n    @Override\r\n    public Single<TaskEntity> getSingleTask() {\r\n        return null;\r\n    }\r\n\r\n\r\n\r\n    @Override\r\n    public Observable<StoreCoupons> getStoreInfo() {\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/anjan/rxjavatutorial/data/repo/TasksRepository.java	(revision 0a370eabecdd3db630d3deb6f5d1a8d3985d6d73)
++++ app/src/main/java/com/anjan/rxjavatutorial/data/repo/TasksRepository.java	(date 1612853800850)
+@@ -28,7 +28,7 @@
+     // Prevent direct instantiation.
+     private TasksRepository(Context context) {
+         mTasksLocalDataSource = new TasksLocalDataSource(context);
+-        mTasksRemoteDataSource = new TaskRemoteDataSource(context);
++        mTasksRemoteDataSource = new TaskRemoteDataSource();
+     }
+ 
+     /**
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.anjan.rxjavatutorial\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n        <activity android:name=\".observable.FlowableActivity\">\r\n\r\n            <!--\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n            -->\r\n        </activity>\r\n        <activity android:name=\".observable.CompleteableActivity\"></activity>\r\n        <activity\r\n            android:name=\".ui.addtask.AddTaskActivity\"\r\n            android:label=\"@string/title_activity_add_task\"\r\n            android:theme=\"@style/AppTheme.NoActionBar\"></activity>\r\n        <activity\r\n            android:name=\".ui.getremotecoupon.GetRemoteCouponActivity\"\r\n            android:theme=\"@style/AppTheme.NoActionBar\"></activity>\r\n        <activity\r\n            android:name=\".ui.tasks.TasksActivity\"\r\n            android:label=\"@string/title_activity_tasks\"\r\n            android:theme=\"@style/AppTheme.NoActionBar\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision 0a370eabecdd3db630d3deb6f5d1a8d3985d6d73)
++++ app/src/main/AndroidManifest.xml	(date 1612851948852)
+@@ -28,16 +28,18 @@
+             android:theme="@style/AppTheme.NoActionBar"></activity>
+         <activity
+             android:name=".ui.getremotecoupon.GetRemoteCouponActivity"
+-            android:theme="@style/AppTheme.NoActionBar"></activity>
+-        <activity
+-            android:name=".ui.tasks.TasksActivity"
+-            android:label="@string/title_activity_tasks"
+             android:theme="@style/AppTheme.NoActionBar">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
++        </activity>
++        <activity
++            android:name=".ui.tasks.TasksActivity"
++            android:label="@string/title_activity_tasks"
++            android:theme="@style/AppTheme.NoActionBar">
++
+         </activity>
+     </application>
+ 
