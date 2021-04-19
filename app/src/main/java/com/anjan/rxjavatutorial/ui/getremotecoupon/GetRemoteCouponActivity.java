@@ -54,6 +54,9 @@ public class GetRemoteCouponActivity extends BaseActivity<GetRemoteCouponView, G
 
         buttonTopScore.setOnClickListener(v -> presenter.getStoreCouponData());
 
+        /**
+         * GIt breaking change related
+         */
 
     }
 
