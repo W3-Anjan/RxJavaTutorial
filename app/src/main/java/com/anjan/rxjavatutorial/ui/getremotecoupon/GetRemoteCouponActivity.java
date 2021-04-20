@@ -59,6 +59,8 @@ public class GetRemoteCouponActivity extends BaseActivity<GetRemoteCouponView, G
          * major release
          * breaking change
          * breaking change
+         *
+         * commit for patch
          */
 
     }
