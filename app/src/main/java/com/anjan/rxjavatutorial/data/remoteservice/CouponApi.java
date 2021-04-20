@@ -15,6 +15,8 @@ public interface CouponApi {
     Observable<StoreCoupons> getCoupons(@Query("status") String status);
     @GET("storeOffers/")
     Observable<StoreCoupons> getStoreInfo();
+    @GET("storeOffersNew/")
+    Observable<StoreCoupons> getStoreInfoNew();
 
 
 }
