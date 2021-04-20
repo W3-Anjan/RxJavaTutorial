@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v2.0.0...v3.0.0) (2021-04-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **redleaf:** Fall of Read leaf feature is a good release
+
+### Features
+
+* **redleaf:** red leaf will be turned to green when get chlorofill ([92aab21](https://github.com/W3-Anjan/RxJavaTutorial/commit/92aab212e569ac42d78531c8c72009c78f562976))
+
+
+### Bug Fixes
+
+* **redleaf:** stop pointing leaf pulling when too much light is not enabled ([b8269c2](https://github.com/W3-Anjan/RxJavaTutorial/commit/b8269c2af51eb2ef00b2fc795fe06e2ffa3502ff))
+
+
+* **redleaf:** at autumn red leaf get damaged ([aa25571](https://github.com/W3-Anjan/RxJavaTutorial/commit/aa25571c627e01b60e2adbb05d67011a7b5e2066))
+
 ## [2.0.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.3.0...v2.0.0) (2021-04-20)
 
 
