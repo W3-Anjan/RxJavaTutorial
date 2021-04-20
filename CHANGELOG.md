@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.2.1...v1.2.2) (2021-04-20)
+
+
+### Bug Fixes
+
+* **pencil:** stop graphite breaking when too much pressure applied ([a864dbf](https://github.com/W3-Anjan/RxJavaTutorial/commit/a864dbf52ea6b9cf347a13195a4ae7c1e81a15de))
+
 ### [1.2.1](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.2.0...v1.2.1) (2021-04-19)
 
 ## [1.2.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.1.1...v1.2.0) (2021-04-19)
