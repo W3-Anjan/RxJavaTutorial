@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.3.0...v2.0.0) (2021-04-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **pencil:** The graphiteWidth option has been removed.
+The default graphite width of 10mm is always used for performance reasons.
+
+* **pencil:** remove 'graphiteWidth' option ([0c2f62a](https://github.com/W3-Anjan/RxJavaTutorial/commit/0c2f62a87104ee3784c007fdd96a452eaaec404e))
+
 ## [1.3.0](https://github.com/W3-Anjan/RxJavaTutorial/compare/v1.2.2...v1.3.0) (2021-04-20)
 
 
